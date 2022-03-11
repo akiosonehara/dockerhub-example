@@ -3,12 +3,12 @@ pipeline {
   agent any
   
   environment {
-    DOCKERHUB_CREDENTIALS = credentials('bernardo9999-dockerhub')
+    DOCKERHUB_CREDENTIALS = credentials('dockerhub-credencial-celepar2022')
   }
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t bernardo9999/dp-alpine-branch1:latest .'
+        sh 'docker build -t celepar2022/dp-alpine-branch1:latest .'
       }
     }
     stage('Login') {
@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push bernardo9999/dp-alpine-branch1:latest'
+        sh 'docker push celepar2022/dp-alpine-branch1:latest'
       }
     }
   }
