@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t bernardo9999/dp-alpine-branch2:latest .
+docker build -t celepar2022/dp-alpine-branch2:latest .
